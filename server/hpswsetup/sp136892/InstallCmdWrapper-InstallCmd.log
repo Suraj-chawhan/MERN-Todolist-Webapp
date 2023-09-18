@@ -1,0 +1,53 @@
+2023-07-06 21:43:20.000|Info|Attempt to execute C:\hpswsetup\sp136892\install.cmd...
+
+C:\hpswsetup\sp136892>REM The following is required in all INSTALL.CMD files 
+
+C:\hpswsetup\sp136892>if exist c:\system.sav\util\SetVariables.cmd Call c:\system.sav\util\SetVariables.cmd 
+
+C:\hpswsetup\sp136892>set version=1.03 
+
+C:\hpswsetup\sp136892>Set block=C:\hpswsetup\sp136892\ 
+
+C:\hpswsetup\sp136892>CD /D "C:\hpswsetup\sp136892\" 
+
+C:\hpswsetup\sp136892>REM Remove the REM from the next line if your component does not support Silent Install (Application Recovery) 
+
+C:\hpswsetup\sp136892>REM Erase /F /Q *.CVA 
+
+C:\hpswsetup\sp136892>REM Add the command-line to have your component to be installed properly 
+
+C:\hpswsetup\sp136892>Pushd src 
+
+C:\hpswsetup\sp136892\src>if not defined FCC_LOG_FOLDER goto BPS 
+
+C:\hpswsetup\sp136892\src>if exist ".\Uninstall.cmd" call ".\Uninstall.cmd" 
+**************************************************************
+***  Batch Install Realtek Bluetooth Filter Driver               
+***                                                            
+***  Please wait a moment	                  
+
+Does C:\Program Files (x86)\REALTEK\Realtek Bluetooth\DPInst.exe specify a file name
+or directory name on the target
+(F = file, D = directory)? f
+C:\hpswsetup\sp136892\src\Drivers\DPInst_64.exe
+1 File(s) copied
+C:\hpswsetup\sp136892\src\Drivers\x64\PidVid_List.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\RtkBtfilter.sys
+C:\hpswsetup\sp136892\src\Drivers\x64\RtkBtManServ.exe
+C:\hpswsetup\sp136892\src\Drivers\x64\rtkfilter.cat
+C:\hpswsetup\sp136892\src\Drivers\x64\Rtkfilter.inf
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8723b_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8723b_mp_chip_bt40_fw_asic_rom_patch_new_s1.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8723d_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8821c_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8822b_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8822c_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8852a_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\rtl8852b_mp_chip_bt40_fw_asic_rom_patch_new.dat
+C:\hpswsetup\sp136892\src\Drivers\x64\RTLBTVersion.dll
+C:\hpswsetup\sp136892\src\Drivers\x64\UninstallDriver.cmd
+15 File(s) copied
+     
+**************************************************************
+***  Driver Install Finished                                       
+
